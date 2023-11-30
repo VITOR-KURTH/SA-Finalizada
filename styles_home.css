@@ -1,0 +1,37 @@
+#body{
+    background: rgb(34,167,195);
+    background: linear-gradient(0deg, rgba(174,45,253,1) 14%, rgba(34,167,195,1) 99%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+   }
+
+input{
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    border-radius: 6px;
+}
+button{
+    font-size: 13px;
+    width: 90px;
+    height: 40px;
+    border-radius: 6px;
+    opacity: calc(80%);
+}
+button:hover{
+    background-color: rgb(76, 242, 156);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+    opacity: calc(100%);
+    width: 95px;
+    height: 45px;
+}
+
+#Home{
+    background-image: url(Fundo\ site\ Login.png);
+}

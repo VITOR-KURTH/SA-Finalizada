@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <link rel="stylesheet" href="/css/styles_table.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/imagens/unnamed.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styletable.css">
+    <title>Agenda</title>
+</head>
+
+<body id="body">
+    <script src="/js/scriptable.js"></script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center">
+                    Agenda
+                </h3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Evento</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+                                    <th>Sobre</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="eventos"></tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="evento">Nome do evento</label>
+                            <input type="text" class="form-control" id="evento" />
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data de Cadastro</label>
+                            <input type="date" class="form-control" id="data" />
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2>Informações do Evento</h2>
+                                <p>Evento: <span id="eventoModal"></span></p>
+                                <p>Data: <span id="dataModal"></span></p>
+                                <p>Status: <span id="statusModal"></span></p>
+                                <button id="btnEditarCliente">Editar Evento</button>
+                                <button id="btnExcluirCliente">Excluir Evento</button>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <label for="status">Status</label><br>
+                            <select id="status" required>
+                                <option value="Não tem">Não tem</option>
+                                <option value="Concluido">Concluído</option>
+                                <option value="Pendente">Pendente</option>
+                            </select>
+                        </div><br>
+                        <button onclick="cadastrarCliente()" type="submit" class="btn">
+                            Cadastrar
+                        </button><br>
+                        <br><button onclick="Voltar()" type="submit" class="btn2">
+                            Voltar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="form-group">
+                <label for="editEvento">Novo Nome do Evento:</label>
+                <input type="text" class="form-control" id="editEvento" />
+            </div>
+            <div class="form-group">
+                <label for="editData">Nova Data:</label>
+                <input type="date" class="form-control" id="editData" />
+            </div>
+            <button id="btnSalvarEdicao">Salvar</button>
+        </div>
+    </div>
+
+    <ul id="listaPessoas"></ul>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="/js/scriptable.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
